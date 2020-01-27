@@ -50,6 +50,60 @@
             document.getElementById('tailTextId').innerHTML
                 = target.value;
         }
+        function setHeaderTextFontFamily(target) {
+            document.getElementById('headetTextFontFamilyButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('headerTextId').style.fontFamily =
+                target.title;
+        }
+        function setContentTextFontFamily(target) {
+            document.getElementById('contenttTextFontFamilyButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('contentTextId').style.fontFamily =
+                target.title;
+        }
+        function setTailTextFontFamily(target) {
+            document.getElementById('tailTextFontFamilyButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('tailTextId').style.fontFamily =
+                target.title;
+        }
+        function setHeaderTextFontSize(target) {
+            document.getElementById('headerTextFontSizeButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('headerTextId').style.fontSize =
+                target.title;
+        }
+        function setContentTextFontSize(target) {
+            document.getElementById('contentTextFontSizeButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('contentTextId').style.fontSize =
+                target.title;
+        }
+        function setTailTextFontSize(target) {
+            document.getElementById('tailTextFontSizeButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('tailTextId').style.fontSize =
+                target.title;
+        }
+        function setHeaderTextFontColor(target) {
+            document.getElementById('headerTextFontColorButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('headerTextId').style.color =
+                target.title;
+        }
+        function setContentTextFontColor(target) {
+            document.getElementById('contentTextFontColorButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('contentTextId').style.color =
+                target.title;
+        }
+        function setTailTextFontColor(target) {
+            document.getElementById('tailTextFontColorButton').innerHTML =
+                target.innerHTML;
+            document.getElementById('tailTextId').style.color =
+                target.title;
+        }
     </script>
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -83,11 +137,7 @@
             text-align: center;
             height: 33%;
             padding-top: 13%;
-            font-weight: normal; 
-            font-style: normal;
-            font-size: 16px;
-            line-height: normal;
-            font-family: normal;
+            
         }
 
         .content-text {
@@ -239,9 +289,15 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="hc vc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">
-                                        <div id="headerTextId" class="header-text">머리글을 입력해주세요.</div>
-                                        <div id="contentTextId" class="content-text">중간글을 입력해주세요.</div>
-                                        <div id="tailTextId" class="tail-text">꼬리글을 입력해주세요.</div>
+                                        <div id="headerTextId" class="header-text" style="font-weight: normal; font-style: normal; font-size: 0.5cm; line-height: normal; font-family: normal; color: normal;">
+                                            머리글을 입력해주세요.
+                                        </div>
+                                        <div id="contentTextId" class="content-text" style="font-weight: normal; font-style: normal; font-size: 0.5cm; line-height: normal; font-family: normal; color: normal;">
+                                            중간글을 입력해주세요.
+                                        </div>
+                                        <div id="tailTextId" class="tail-text" style="font-weight: normal; font-style: normal; font-size: 0.5cm; line-height: normal; font-family: normal; color: normal;">
+                                            꼬리글을 입력해주세요.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -309,15 +365,17 @@
                                         </div>
                                         <div class="dropdown">
                                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
+                                                    id="headetTextFontFamilyButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 폰트
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
+                                                <a class="dropdown-item" title="normal" onclick="setHeaderTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체" onclick="setHeaderTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕" onclick="setHeaderTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조" onclick="setHeaderTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif" onclick="setHeaderTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -334,15 +392,17 @@
                                             <div class="text-s font-weight-bold text-success text-uppercase mb-1">중간글
                                             </div>
                                             <button class="btn btn-success dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton2" data-toggle="dropdown"
+                                                    id="contenttTextFontFamilyButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 폰트
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="normal" onclick="setContentTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체" onclick="setContentTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕" onclick="setContentTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조" onclick="setContentTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif" onclick="setContentTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -359,15 +419,17 @@
                                             <div class="text-s font-weight-bold text-info text-uppercase mb-1">꼬리글
                                             </div>
                                             <button class="btn btn-info dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton3" data-toggle="dropdown"
+                                                    id="tailTextFontFamilyButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 폰트
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="normal" onclick="setTailTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체" onclick="setTailTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕" onclick="setTailTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조" onclick="setTailTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif" onclick="setTailTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -387,15 +449,17 @@
                                         </div>
                                         <div class="dropdown">
                                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
+                                                    id="headerTextFontSizeButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 크기
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
+                                                <a class="dropdown-item" title="0.5cm" onclick="setHeaderTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm" onclick="setHeaderTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm" onclick="setHeaderTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm" onclick="setHeaderTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm" onclick="setHeaderTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -412,15 +476,17 @@
                                             <div class="text-s font-weight-bold text-success text-uppercase mb-1">중간글
                                             </div>
                                             <button class="btn btn-success dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton2" data-toggle="dropdown"
+                                                    id="contentTextFontSizeButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 크기
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="0.5cm" onclick="setContentTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm" onclick="setContentTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm" onclick="setContentTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm" onclick="setContentTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm" onclick="setContentTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -437,15 +503,17 @@
                                             <div class="text-s font-weight-bold text-info text-uppercase mb-1">꼬리글
                                             </div>
                                             <button class="btn btn-info dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton3" data-toggle="dropdown"
+                                                    id="tailTextFontSizeButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 크기
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="0.5cm" onclick="setTailTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm" onclick="setTailTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm" onclick="setTailTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm" onclick="setTailTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm" onclick="setTailTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -465,15 +533,17 @@
                                         </div>
                                         <div class="dropdown">
                                             <button class="btn btn-primary dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
+                                                    id="headerTextFontColorButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 색깔
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
+                                                <a class="dropdown-item" title="normal" onclick="setHeaderTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff" onclick="setHeaderTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00" onclick="setHeaderTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0" onclick="setHeaderTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f" onclick="setHeaderTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
@@ -490,15 +560,17 @@
                                             <div class="text-s font-weight-bold text-success text-uppercase mb-1">중간글
                                             </div>
                                             <button class="btn btn-success dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton2" data-toggle="dropdown"
+                                                    id="contentTextFontColorButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 색깔
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="normal" onclick="setContentTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff" onclick="setContentTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00" onclick="setContentTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0" onclick="setContentTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f" onclick="setContentTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
@@ -515,15 +587,17 @@
                                             <div class="text-s font-weight-bold text-info text-uppercase mb-1">꼬리글
                                             </div>
                                             <button class="btn btn-info dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton3" data-toggle="dropdown"
+                                                    id="tailTextFontColorButton" data-toggle="dropdown"
                                                     aria-haspopup="true" aria-expanded="false">
                                                 글씨 색깔
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <a class="dropdown-item" title="normal" onclick="setTailTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff" onclick="setTailTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00" onclick="setTailTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0" onclick="setTailTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f" onclick="setTailTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
