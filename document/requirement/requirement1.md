@@ -22,7 +22,7 @@
       * text
       * Color
       * Font
-      * size
+      * Size
   * **Tail**
     * **TextPart**
       * text
