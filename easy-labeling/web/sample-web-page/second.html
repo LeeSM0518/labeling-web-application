@@ -20,7 +20,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <style>
         .hc {
-            width: 400px;
+            width: 700px;
             left: 0;
             right: 0;
             margin-left: auto;
@@ -83,24 +83,16 @@
     <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
-        <div id="content" style="margin-top: 30px;">
-
-            <!-- Topbar -->
-            <!-- End of Topbar -->
+        <div id="content">
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <h1 class="h3 mb-0 text-gray-800">간편한 라벨링 웹 사이트</h1>
+            </nav>
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">누구나 쉽게 라벨링 하자!</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                </div>
-
                 <!-- Content Row -->
                 <div class="row">
-                    <div class="col-xl-3 col-md-3 mb-2 label-backgroun-setting">
+                    <div class="col-xl-2 col-md-3 mb-2 label-backgroun-setting offset-1">
                         <div>
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
@@ -109,16 +101,16 @@
                                             <div class="dropdown">
                                                 <button id="labelBackgroundButton" 
                                                         class="btn btn-primary dropdown-toggle" type="button"
-                                                         data-toggle="dropdown"
+                                                         data-toggle="dropdown" style="font-size: 30px"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 배경색 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" title="#fff" onclick="setLabelBackground(this)">흰색</a>
-                                                    <a class="dropdown-item" title="#f00" onclick="setLabelBackground(this)">빨강</a>
-                                                    <a class="dropdown-item" title="#0f0" onclick="setLabelBackground(this)">초록</a>
-                                                    <a class="dropdown-item" title="#00f" onclick="setLabelBackground(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff" onclick="setLabelBackground(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00" onclick="setLabelBackground(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0" onclick="setLabelBackground(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f" onclick="setLabelBackground(this)">파랑</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,15 +125,16 @@
                                         <div class="col mr-2">
                                             <div class="dropdown">
                                                 <button class="btn btn-success dropdown-toggle" type="button"
-                                                        id="labelBorderSizeButton" data-toggle="dropdown"
+                                                        id="labelBorderSizeButton" style="font-size: 30px"
+                                                        data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 테두리 두께 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" title="0px" onclick="setLabelBorderSize(this)">0px</a>
-                                                    <a class="dropdown-item" title="1px" onclick="setLabelBorderSize(this)">1px</a>
-                                                    <a class="dropdown-item" title="2px" onclick="setLabelBorderSize(this)">2px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="0px" onclick="setLabelBorderSize(this)">0px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="1px" onclick="setLabelBorderSize(this)">1px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="2px" onclick="setLabelBorderSize(this)">2px</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,18 +148,18 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="dropdown">
-                                                <button class="btn btn-info dropdown-toggle" type="button"
+                                                <button class="btn btn-info dropdown-toggle" type="button" style="font-size: 30px"
                                                         id="labelBorderColorButton" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 테두리 색 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" title="#fff" onclick="setLabelBorderColor(this)">흰색</a>
-                                                    <a class="dropdown-item" title="#f00" onclick="setLabelBorderColor(this)">빨강</a>
-                                                    <a class="dropdown-item" title="#0f0" onclick="setLabelBorderColor(this)">초록</a>
-                                                    <a class="dropdown-item" title="#00f" onclick="setLabelBorderColor(this)">파랑</a>
-                                                    <a class="dropdown-item" title="#000" onclick="setLabelBorderColor(this)">검정</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff" onclick="setLabelBorderColor(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00" onclick="setLabelBorderColor(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0" onclick="setLabelBorderColor(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f" onclick="setLabelBorderColor(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#000" onclick="setLabelBorderColor(this)">검정</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -181,7 +174,7 @@
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">라벨링 예시</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-size: 30px">라벨링 예시</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -206,7 +199,7 @@
                                         <div id="contentTextId" class="content-text" style="font-weight: normal; font-style: normal; font-size: 200%; line-height: normal; font-family: normal; color: normal;">
                                             중간글을 입력해주세요.
                                         </div>
-                                        <div id="tailTextId" class="tail-text" style="font-weight: normal; font-style: normal; font-size: 1em; line-height: normal; font-family: normal; color: normal;">
+                                        <div id="tailTextId" class="tail-text" style="font-weight: normal; font-style: normal; font-size: 200%; line-height: normal; font-family: normal; color: normal;">
                                             꼬리글을 입력해주세요.
                                         </div>
                                     </div>
