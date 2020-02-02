@@ -16,19 +16,16 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
     <script src="js/responsive.js"></script>
-    
+
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <style>
         .hc {
-            width: 700px;
+            width: 21cm;
             left: 0;
             right: 0;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .vc {
-            height: 400px;
+            height: 14.85cm;
             top: 0;
             bottom: 0;
             margin-top: auto;
@@ -37,40 +34,6 @@
 
         .label-backgroun-setting {
             font-size: 20px
-        }
-        
-        .label-example {
-            background-color: #fff;
-            border: 5px solid #000;
-        }
-
-        .header-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            
-        }
-
-        .content-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            font-weight: normal; 
-            font-style: normal;
-            font-size: 16px;
-            line-height: normal;
-            font-family: normal;
-        }
-
-        .tail-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            font-weight: normal; 
-            font-style: normal;
-            font-size: 16px;
-            line-height: normal;
-            font-family: normal;
         }
     </style>
 </head>
@@ -99,18 +62,23 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="dropdown">
-                                                <button id="labelBackgroundButton" 
-                                                        class="btn btn-primary dropdown-toggle label-backgroun-setting" type="button"
-                                                         data-toggle="dropdown"
+                                                <button id="labelBackgroundButton"
+                                                        class="btn btn-primary dropdown-toggle label-backgroun-setting"
+                                                        type="button"
+                                                        data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 배경색 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff" onclick="setLabelBackground(this)">흰색</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00" onclick="setLabelBackground(this)">빨강</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0" onclick="setLabelBackground(this)">초록</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f" onclick="setLabelBackground(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff"
+                                                       onclick="setLabelBackground(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00"
+                                                       onclick="setLabelBackground(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0"
+                                                       onclick="setLabelBackground(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f"
+                                                       onclick="setLabelBackground(this)">파랑</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,23 +86,27 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div>
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="dropdown">
-                                                <button class="btn btn-success dropdown-toggle label-backgroun-setting" type="button"
+                                                <button class="btn btn-success dropdown-toggle label-backgroun-setting"
+                                                        type="button"
                                                         id="labelBorderSizeButton" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 테두리 두께 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" style="font-size: 30px" title="0px" onclick="setLabelBorderSize(this)">0px</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="1px" onclick="setLabelBorderSize(this)">1px</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="2px" onclick="setLabelBorderSize(this)">2px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="0px"
+                                                       onclick="setLabelBorderSize(this)">0px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="1px"
+                                                       onclick="setLabelBorderSize(this)">1px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="2px"
+                                                       onclick="setLabelBorderSize(this)">2px</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,18 +120,86 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="dropdown">
-                                                <button class="btn btn-info dropdown-toggle label-backgroun-setting" type="button" 
+                                                <button class="btn btn-info dropdown-toggle label-backgroun-setting"
+                                                        type="button"
                                                         id="labelBorderColorButton" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     라벨 테두리 색 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff" onclick="setLabelBorderColor(this)">흰색</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00" onclick="setLabelBorderColor(this)">빨강</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0" onclick="setLabelBorderColor(this)">초록</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f" onclick="setLabelBorderColor(this)">파랑</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="#000" onclick="setLabelBorderColor(this)">검정</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff"
+                                                       onclick="setLabelBorderColor(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00"
+                                                       onclick="setLabelBorderColor(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0"
+                                                       onclick="setLabelBorderColor(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f"
+                                                       onclick="setLabelBorderColor(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#000"
+                                                       onclick="setLabelBorderColor(this)">검정</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="dropdown">
+                                                <button class="btn btn-warning dropdown-toggle label-backgroun-setting"
+                                                        type="button"
+                                                        id="labelBorderColorButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    가운데 Bar 두께 선택
+                                                </button>
+                                                <div class="dropdown-menu animated--fade-in"
+                                                     aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff"
+                                                       onclick="setLabelBorderColor(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00"
+                                                       onclick="setLabelBorderColor(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0"
+                                                       onclick="setLabelBorderColor(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f"
+                                                       onclick="setLabelBorderColor(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#000"
+                                                       onclick="setLabelBorderColor(this)">검정</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="dropdown">
+                                                <button class="btn btn-danger dropdown-toggle label-backgroun-setting"
+                                                        type="button"
+                                                        id="labelBorderColorButton" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                    가운데 Bar 색 선택
+                                                </button>
+                                                <div class="dropdown-menu animated--fade-in"
+                                                     aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#fff"
+                                                       onclick="setLabelBorderColor(this)">흰색</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#f00"
+                                                       onclick="setLabelBorderColor(this)">빨강</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#0f0"
+                                                       onclick="setLabelBorderColor(this)">초록</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#00f"
+                                                       onclick="setLabelBorderColor(this)">파랑</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="#000"
+                                                       onclick="setLabelBorderColor(this)">검정</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,16 +231,62 @@
                                     </div>
                                 </div>
                                 <!-- Card Body -->
+
+<!--                                <div class="card-body">-->
+<!--                                    <div class="hc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">-->
+<!--                                        <div id="headerTextId" class="header-text" style="font-weight: normal;-->
+<!--                                        font-style: normal; font-size: 200%; line-height: normal; text-align: center;-->
+<!--                                        font-family: normal; color: initial; height: 33%; padding-top: 5%;">-->
+<!--                                            머리글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                        <div id="contentTextId" class="content-text" style="font-weight: normal;-->
+<!--                                        font-style: normal; font-size: 200%; line-height: normal; text-align: center;-->
+<!--                                        font-family: normal; color: initial; height: 33%; padding-top: 5%;">-->
+<!--                                            중간글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                        <div id="tailTextId" class="tail-text" style="font-weight: normal;-->
+<!--                                         font-style: normal; font-size: 200%; line-height: normal; text-align: center;-->
+<!--                                          font-family: normal; color: initial; height: 33%; padding-top: 5%;">-->
+<!--                                            꼬리글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+                                <!-- text-1 -->
+                                <!--                                <div class="card-body">-->
+                                <!--                                    <div class="hc" style="background-color: #fff; border: 5px solid #000;"-->
+                                <!--                                         id="labelExample">-->
+                                <!--                                        <div id="contentTextId" class="content-text" style="font-weight: normal;-->
+                                <!--                                        font-style: normal; font-size: 200%; line-height: normal;-->
+                                <!--                                        font-family: normal; color: initial; text-align: center;-->
+                                <!--                                        height: 33%; padding-top: 30%;">-->
+                                <!--                                            중간글을 입력해주세요.-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+<!--                                text-2 -->
+<!--                                <div class="card-body">-->
+<!--                                    <div class="hc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">-->
+<!--                                        <div id="headerTextId" class="header-text" style="font-weight: normal;-->
+<!--                                        font-style: normal; font-size: 300%; line-height: normal; text-align: center;-->
+<!--                                        font-family: normal; color: initial; height: 33%; margin-top: 10%;">-->
+<!--                                            머리글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                        <div id="tailTextId" class="tail-text" style="font-weight: normal;-->
+<!--                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;-->
+<!--                                          font-family: normal; color: initial; height: 33%; margin-top: 15%;">-->
+<!--                                            꼬리글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="card-body">
-                                    <div class="hc vc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">
-                                        <div id="headerTextId" class="header-text" style="font-weight: normal; font-style: normal; font-size: 200%; line-height: normal; font-family: normal; color: normal;">
-                                            머리글을 입력해주세요.
-                                        </div>
-                                        <div id="contentTextId" class="content-text" style="font-weight: normal; font-style: normal; font-size: 200%; line-height: normal; font-family: normal; color: normal;">
+                                    <div class="hc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">
+                                        <div style="padding: 5mm; height: 100%;">
+                                            <div id="contentTextId" style="font-weight: normal; margin: inherit;
+                                        font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                        font-family: normal; color: initial; padding-top: 25%; height: 100%; border: 2mm solid #000; ">
                                             중간글을 입력해주세요.
                                         </div>
-                                        <div id="tailTextId" class="tail-text" style="font-weight: normal; font-style: normal; font-size: 200%; line-height: normal; font-family: normal; color: normal;">
-                                            꼬리글을 입력해주세요.
                                         </div>
                                     </div>
                                 </div>
@@ -211,7 +297,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="row offset-1">
                 <div class="col-xl-5 col-md-3 mb-5 text-setting">
                     <div>
                         <div class="card border-left-primary shadow h-100 py-2">
@@ -222,7 +308,8 @@
                                         </div>
                                         <input type="text" class="form-control bg-light border-0 small"
                                                placeholder="머리글을 입력해주세요."
-                                               aria-label="Search" aria-describedby="basic-addon2" onchange="headerTextChange(this)">
+                                               aria-label="Search" aria-describedby="basic-addon2"
+                                               onchange="headerTextChange(this)">
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +324,8 @@
                                         </div>
                                         <input type="text" class="form-control bg-light border-0 small"
                                                placeholder="중간글을 입력해주세요."
-                                               aria-label="Search" aria-describedby="basic-addon2" onchange="contentTextChange(this)">
+                                               aria-label="Search" aria-describedby="basic-addon2"
+                                               onchange="contentTextChange(this)">
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +340,8 @@
                                         </div>
                                         <input type="text" class="form-control bg-light border-0 small"
                                                placeholder="꼬리글을 입력해주세요."
-                                               aria-label="Search" aria-describedby="basic-addon2" onchange="tailTextChange(this)">
+                                               aria-label="Search" aria-describedby="basic-addon2"
+                                               onchange="tailTextChange(this)">
                                     </div>
                                 </div>
                             </div>
@@ -275,11 +364,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setHeaderTextFontFamily(this)">기본</a>
-                                                <a class="dropdown-item" title="궁서체" onclick="setHeaderTextFontFamily(this)">궁서체</a>
-                                                <a class="dropdown-item" title="나눔고딕" onclick="setHeaderTextFontFamily(this)">나눔고딕</a>
-                                                <a class="dropdown-item" title="나눔명조" onclick="setHeaderTextFontFamily(this)">나눔명조</a>
-                                                <a class="dropdown-item" title="serif" onclick="setHeaderTextFontFamily(this)">serif</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setHeaderTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체"
+                                                   onclick="setHeaderTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕"
+                                                   onclick="setHeaderTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조"
+                                                   onclick="setHeaderTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif"
+                                                   onclick="setHeaderTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -302,11 +396,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setContentTextFontFamily(this)">기본</a>
-                                                <a class="dropdown-item" title="궁서체" onclick="setContentTextFontFamily(this)">궁서체</a>
-                                                <a class="dropdown-item" title="나눔고딕" onclick="setContentTextFontFamily(this)">나눔고딕</a>
-                                                <a class="dropdown-item" title="나눔명조" onclick="setContentTextFontFamily(this)">나눔명조</a>
-                                                <a class="dropdown-item" title="serif" onclick="setContentTextFontFamily(this)">serif</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setContentTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체"
+                                                   onclick="setContentTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕"
+                                                   onclick="setContentTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조"
+                                                   onclick="setContentTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif"
+                                                   onclick="setContentTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -329,11 +428,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setTailTextFontFamily(this)">기본</a>
-                                                <a class="dropdown-item" title="궁서체" onclick="setTailTextFontFamily(this)">궁서체</a>
-                                                <a class="dropdown-item" title="나눔고딕" onclick="setTailTextFontFamily(this)">나눔고딕</a>
-                                                <a class="dropdown-item" title="나눔명조" onclick="setTailTextFontFamily(this)">나눔명조</a>
-                                                <a class="dropdown-item" title="serif" onclick="setTailTextFontFamily(this)">serif</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setTailTextFontFamily(this)">기본</a>
+                                                <a class="dropdown-item" title="궁서체"
+                                                   onclick="setTailTextFontFamily(this)">궁서체</a>
+                                                <a class="dropdown-item" title="나눔고딕"
+                                                   onclick="setTailTextFontFamily(this)">나눔고딕</a>
+                                                <a class="dropdown-item" title="나눔명조"
+                                                   onclick="setTailTextFontFamily(this)">나눔명조</a>
+                                                <a class="dropdown-item" title="serif"
+                                                   onclick="setTailTextFontFamily(this)">serif</a>
                                             </div>
                                         </div>
                                     </div>
@@ -359,11 +463,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="0.5cm" onclick="setHeaderTextFontSize(this)">기본</a>
-                                                <a class="dropdown-item" title="0.1cm" onclick="setHeaderTextFontSize(this)">0.1cm</a>
-                                                <a class="dropdown-item" title="0.2cm" onclick="setHeaderTextFontSize(this)">0.2cm</a>
-                                                <a class="dropdown-item" title="0.6cm" onclick="setHeaderTextFontSize(this)">0.6cm</a>
-                                                <a class="dropdown-item" title="1cm" onclick="setHeaderTextFontSize(this)">1cm</a>
+                                                <a class="dropdown-item" title="0.5cm"
+                                                   onclick="setHeaderTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm"
+                                                   onclick="setHeaderTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm"
+                                                   onclick="setHeaderTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm"
+                                                   onclick="setHeaderTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm"
+                                                   onclick="setHeaderTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -386,11 +495,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="0.5cm" onclick="setContentTextFontSize(this)">기본</a>
-                                                <a class="dropdown-item" title="0.1cm" onclick="setContentTextFontSize(this)">0.1cm</a>
-                                                <a class="dropdown-item" title="0.2cm" onclick="setContentTextFontSize(this)">0.2cm</a>
-                                                <a class="dropdown-item" title="0.6cm" onclick="setContentTextFontSize(this)">0.6cm</a>
-                                                <a class="dropdown-item" title="1cm" onclick="setContentTextFontSize(this)">1cm</a>
+                                                <a class="dropdown-item" title="0.5cm"
+                                                   onclick="setContentTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm"
+                                                   onclick="setContentTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm"
+                                                   onclick="setContentTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm"
+                                                   onclick="setContentTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm"
+                                                   onclick="setContentTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -413,11 +527,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="0.5cm" onclick="setTailTextFontSize(this)">기본</a>
-                                                <a class="dropdown-item" title="0.1cm" onclick="setTailTextFontSize(this)">0.1cm</a>
-                                                <a class="dropdown-item" title="0.2cm" onclick="setTailTextFontSize(this)">0.2cm</a>
-                                                <a class="dropdown-item" title="0.6cm" onclick="setTailTextFontSize(this)">0.6cm</a>
-                                                <a class="dropdown-item" title="1cm" onclick="setTailTextFontSize(this)">1cm</a>
+                                                <a class="dropdown-item" title="0.5cm"
+                                                   onclick="setTailTextFontSize(this)">기본</a>
+                                                <a class="dropdown-item" title="0.1cm"
+                                                   onclick="setTailTextFontSize(this)">0.1cm</a>
+                                                <a class="dropdown-item" title="0.2cm"
+                                                   onclick="setTailTextFontSize(this)">0.2cm</a>
+                                                <a class="dropdown-item" title="0.6cm"
+                                                   onclick="setTailTextFontSize(this)">0.6cm</a>
+                                                <a class="dropdown-item" title="1cm"
+                                                   onclick="setTailTextFontSize(this)">1cm</a>
                                             </div>
                                         </div>
                                     </div>
@@ -443,11 +562,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setHeaderTextFontColor(this)">기본</a>
-                                                <a class="dropdown-item" title="#fff" onclick="setHeaderTextFontColor(this)">흰색</a>
-                                                <a class="dropdown-item" title="#f00" onclick="setHeaderTextFontColor(this)">빨강</a>
-                                                <a class="dropdown-item" title="#0f0" onclick="setHeaderTextFontColor(this)">초록</a>
-                                                <a class="dropdown-item" title="#00f" onclick="setHeaderTextFontColor(this)">파랑</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setHeaderTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff"
+                                                   onclick="setHeaderTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00"
+                                                   onclick="setHeaderTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0"
+                                                   onclick="setHeaderTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f"
+                                                   onclick="setHeaderTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
@@ -470,11 +594,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setContentTextFontColor(this)">기본</a>
-                                                <a class="dropdown-item" title="#fff" onclick="setContentTextFontColor(this)">흰색</a>
-                                                <a class="dropdown-item" title="#f00" onclick="setContentTextFontColor(this)">빨강</a>
-                                                <a class="dropdown-item" title="#0f0" onclick="setContentTextFontColor(this)">초록</a>
-                                                <a class="dropdown-item" title="#00f" onclick="setContentTextFontColor(this)">파랑</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setContentTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff"
+                                                   onclick="setContentTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00"
+                                                   onclick="setContentTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0"
+                                                   onclick="setContentTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f"
+                                                   onclick="setContentTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
@@ -497,11 +626,16 @@
                                             </button>
                                             <div class="dropdown-menu animated--fade-in"
                                                  aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" title="normal" onclick="setTailTextFontColor(this)">기본</a>
-                                                <a class="dropdown-item" title="#fff" onclick="setTailTextFontColor(this)">흰색</a>
-                                                <a class="dropdown-item" title="#f00" onclick="setTailTextFontColor(this)">빨강</a>
-                                                <a class="dropdown-item" title="#0f0" onclick="setTailTextFontColor(this)">초록</a>
-                                                <a class="dropdown-item" title="#00f" onclick="setTailTextFontColor(this)">파랑</a>
+                                                <a class="dropdown-item" title="normal"
+                                                   onclick="setTailTextFontColor(this)">기본</a>
+                                                <a class="dropdown-item" title="#fff"
+                                                   onclick="setTailTextFontColor(this)">흰색</a>
+                                                <a class="dropdown-item" title="#f00"
+                                                   onclick="setTailTextFontColor(this)">빨강</a>
+                                                <a class="dropdown-item" title="#0f0"
+                                                   onclick="setTailTextFontColor(this)">초록</a>
+                                                <a class="dropdown-item" title="#00f"
+                                                   onclick="setTailTextFontColor(this)">파랑</a>
                                             </div>
                                         </div>
                                     </div>
@@ -512,86 +646,6 @@
                 </div>
 
             </div>
-
-            <div class="row">
-                <div class="col-xl-3 col-md-3 mb-4 paper-setting">
-                    <div>
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="dropdown text-setting">
-                                            <button class="btn btn-warning dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                종이 사이즈 선택
-                                            </button>
-                                            <div class="dropdown-menu animated--fade-in"
-                                                 aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3 mb-4 paper-setting">
-                    <div>
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="dropdown text-setting">
-                                            <button class="btn btn-warning dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                종이 방향 선택
-                                            </button>
-                                            <div class="dropdown-menu animated--fade-in"
-                                                 aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3 mb-4 paper-setting">
-                    <div>
-                        <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="dropdown text-setting">
-                                            <button class="btn btn-warning dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton1" data-toggle="dropdown"
-                                                    aria-haspopup="true" aria-expanded="false">
-                                                라벨링 타입 선택
-                                            </button>
-                                            <div class="dropdown-menu animated--fade-in"
-                                                 aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item" href="#">없음</a>
-                                                <a class="dropdown-item" href="#">빨강</a>
-                                                <a class="dropdown-item" href="#">파랑</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
         <!-- End of Main Content -->
 
