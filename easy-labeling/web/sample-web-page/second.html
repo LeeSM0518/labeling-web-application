@@ -32,7 +32,7 @@
             margin-bottom: auto;
         }
 
-        .label-backgroun-setting {
+        .label-font-size {
             font-size: 20px
         }
     </style>
@@ -101,12 +101,12 @@
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" style="font-size: 30px" title="0px"
-                                                       onclick="setLabelBorderSize(this)">0px</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="1px"
-                                                       onclick="setLabelBorderSize(this)">1px</a>
-                                                    <a class="dropdown-item" style="font-size: 30px" title="2px"
-                                                       onclick="setLabelBorderSize(this)">2px</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="1mm"
+                                                       onclick="setLabelBorderSize(this)">1mm</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="2mm"
+                                                       onclick="setLabelBorderSize(this)">2mm</a>
+                                                    <a class="dropdown-item" style="font-size: 30px" title="3mm"
+                                                       onclick="setLabelBorderSize(this)">3mm</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -279,18 +279,34 @@
 <!--                                        </div>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-<!--                                TODO 가운데 Bar 두께 및 색 설정 버튼 기능(javascript) 구현-->
+<!--                                -->
+<!--                                <div class="card-body">-->
+<!--                                    <div class="hc" style="background-color: #fff; border: 1.5px solid #000;" id="labelExample">-->
+<!--                                        <div style="padding: 5mm; height: 100%;">-->
+<!--                                            <div id="contentTextId" style="font-weight: normal; margin: inherit;-->
+<!--                                        font-style: normal; font-size: 300%; line-height: normal; text-align: center;-->
+<!--                                        font-family: normal; color: initial; padding-top: 25%; height: 100%; border: 2mm solid #000; ">-->
+<!--                                            중간글을 입력해주세요.-->
+<!--                                        </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="card-body">
-                                    <div class="hc" style="background-color: #fff; border: 5px solid #000;" id="labelExample">
-                                        <div style="padding: 5mm; height: 100%;">
-                                            <div id="contentTextId" style="font-weight: normal; margin: inherit;
+                                    <div class="hc" style="background-color: #fff; border: 1.5px solid #000;" id="labelExample">
+                                        <div id="headerTextId" class="header-text" style="font-weight: normal;
                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                        font-family: normal; color: initial; padding-top: 25%; height: 100%; border: 2mm solid #000; ">
-                                            중간글을 입력해주세요.
+                                        font-family: normal; color: initial; height: 33%; margin-top: 10%;">
+                                            머리글을 입력해주세요.
                                         </div>
+                                        <div id="label-bar" style="height: 1mm; width: 100%; background-color: black;"></div>
+                                        <div id="tailTextId" class="tail-text" style="font-weight: normal;
+                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                          font-family: normal; color: initial; height: 33%; margin-top: 15%;">
+                                            꼬리글을 입력해주세요.
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
