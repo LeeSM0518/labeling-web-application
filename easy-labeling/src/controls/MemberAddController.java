@@ -2,7 +2,6 @@ package controls;
 
 import annotation.Component;
 import bind.DataBinding;
-import dao.PostgresSqlMemberDao;
 
 import java.util.Map;
 

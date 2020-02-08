@@ -2,10 +2,7 @@ package controls;
 
 import annotation.Component;
 import bind.DataBinding;
-import dao.PostgresSqlCategoryDao;
-import dao.PostgresSqlPostDao;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
