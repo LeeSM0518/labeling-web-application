@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--태그 규칙을 정의한 DTD 선언-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.WeightDao">
+    <resultMap id="weightResultMap" type="weight">
+        <id column="size" property="size"/>
+    </resultMap>
+
+    <select id="selectList" resultMap="weightResultMap">
+        select size
+        from weight
+    </select>
+
+</mapper>
