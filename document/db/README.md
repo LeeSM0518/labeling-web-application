@@ -76,7 +76,9 @@
 
 <br>
 
-## 스키마
+## SQL
+
+### CREATE
 
 * **PAPER**
 
@@ -92,8 +94,8 @@
 
   ```sql
   create table COLOR (
-    name varchar(2) primary key,
-    code varchar(5)
+    name varchar(20) primary key,
+    code varchar(7)
   );
   ```
 
@@ -150,4 +152,105 @@
   );
   ```
 
-  
+
+<br>
+
+### INSERT
+
+* **PAPER**
+
+  ```sql
+  insert into PAPER values
+  ('A3', '420mm', '297mm'),
+  ('A4', '297mm', '210mm'),
+  ('A5', '210mm', '148mm'),
+  ('another', '130mm', '75mm');
+  ```
+
+* **COLOR**
+
+  ```sql
+  insert into COLOR values
+  ('빨간색', '#FF0000'),
+  ('주황색', '#FF5E00'),
+  ('노란색', '#FFE400'),
+  ('초록색', '#1FDA11'),
+  ('파란색', '#0900FF'),
+  ('하늘색', '#00D8FF'),
+  ('보라색', '#6600FF'),
+  ('분홍색', '#FF00DD'),
+  ('검정색', '#000000'),
+  ('흰색', '#FFFFFF');
+  ```
+
+* **FONT_SIZE**
+
+  ```sql
+  insert into FONT_SIZE values
+  ('1cm'), ('2cm'), ('3cm'), ('4cm'), ('5cm'), ('6cm'), ('7cm'), ('8cm'), ('9cm'), ('10cm'), ('11cm'), ('12cm'), ('13cm'), ('14cm'), ('15cm'), ('16cm'), ('17cm'), ('18cm'), ('19cm'), ('20cm');
+  ```
+
+* **WEIGHT**
+
+  ```sql
+  insert into WEIGHT values
+  ('1mm'), ('2mm'), ('3mm'), ('4mm'), ('5mm'), ('6mm'), ('7mm'), ('8mm'), ('9mm'), ('10mm'), ('11mm'), ('12mm'), ('13mm'), ('14mm'), ('15mm'), ('16mm'), ('17mm'), ('18mm'), ('19mm'), ('20mm');
+  ```
+
+* **FONT**
+
+  ```sql
+  insert into FONT values
+  ('Black Han Sans'),
+  ('Do Hyeon'),
+  ('Gothic A1'),
+  ('Jua'),
+  ('Nanum Brush Script'),
+  ('Nanum Gothic'),
+  ('Nanum Gothic Coding'),
+  ('Nanum Myeongjo'),
+  ('Nanum Pen Script'),
+  ('Noto Sans KR'),
+  ('Noto Serif KR'),
+  ('Sunflower');
+  ```
+
+* **LABEL**
+
+  ```sql
+  insert into LABEL values
+  (DEFAULT, 'text1'),
+  (DEFAULT, 'text1-border'),
+  (DEFAULT, 'text2'),
+  (DEFAULT, 'text2-bar'),
+  (DEFAULT, 'text2-border'),
+  ```
+
+* **STYLE**
+
+  ```sql
+  insert into STYLE values
+  (DEFAULT, 'header'),
+  (DEFAULT, 'content'),
+  (DEFAULT, 'tail'),
+  (DEFAULT, 'bar'),
+  (DEFAULT, 'border');
+  ```
+
+* **LABEL_STYLE**
+
+  ```sql
+  insert into LABEL_STYLE values
+  (1, 2),
+  (2, 2),
+  (2, 5),
+  (3, 1),
+  (3, 3),
+  (4, 1),
+  (4, 3),
+  (4, 4),
+  (5, 1),
+  (5, 3),
+  (5, 4),
+  (5, 5);
+  ```
