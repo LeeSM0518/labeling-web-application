@@ -2,7 +2,6 @@ package controls;
 
 import annotation.Component;
 import bind.DataBinding;
-import dao.PostgresSqlCategoryDao;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -9,10 +9,14 @@
     </settings>
 
     <typeAliases>
-        <typeAlias type="vo.Member" alias="member"/>
-        <typeAlias type="vo.Category" alias="category"/>
-        <typeAlias type="vo.Post" alias="post"/>
-        <typeAlias type="vo.Comment" alias="comment"/>
+        <typeAlias type="vo.Color" alias="color"/>
+        <typeAlias type="vo.Font" alias="font"/>
+        <typeAlias type="vo.FontSize" alias="fontSize"/>
+        <typeAlias type="vo.Label" alias="label"/>
+        <typeAlias type="vo.LabelStyle" alias="labelStyle"/>
+        <typeAlias type="vo.Paper" alias="paper"/>
+        <typeAlias type="vo.Style" alias="style"/>
+        <typeAlias type="vo.Weight" alias="weight"/>
     </typeAliases>
 
     <environments default="development">
@@ -25,9 +29,12 @@
     </environments>
 
     <mappers>
-        <mapper resource="dao/PostgresSqlMemberDao.xml"/>
-        <mapper resource="dao/PostgresSqlCategoryDao.xml"/>
-        <mapper resource="dao/PostgresSqlPostDao.xml"/>
+        <mapper resource="dao/PostgresSqlPaperDao.xml"/>
+        <mapper resource="dao/PostgresSqlStyleDao.xml"/>
+        <mapper resource="dao/PostgresSqlColorDao.xml"/>
+        <mapper resource="dao/PostgresSqlWeightDao.xml"/>
+        <mapper resource="dao/PostgresSqlFontSizeDao.xml"/>
+        <mapper resource="dao/PostgresSqlFontDao.xml"/>
     </mappers>
 
 </configuration>

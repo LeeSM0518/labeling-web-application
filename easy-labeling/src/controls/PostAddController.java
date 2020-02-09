@@ -2,8 +2,6 @@ package controls;
 
 import annotation.Component;
 import bind.DataBinding;
-import dao.CategoryDao;
-import dao.PostDao;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
