@@ -4,6 +4,21 @@ function setLabelBackground(target) {
         = target.title;
 }
 
+function setLabelStyle(target) {
+    document.getElementById('styleId').value = target.title;
+}
+
+function setPaperSize(target) {
+    document.getElementById('paperSizeButton').innerHTML = target.innerHTML;
+    document.getElementById('paperSizeButton').title = target.title;
+    var paperSize = target.title;
+    var arr = paperSize.split(',');
+    var width = arr[0];
+    var height = arr[1];
+    document.getElementById('widthId').value = width;
+    document.getElementById('heightId').value = height;
+}
+
 function setLabelBorderSize(target) {
     document.getElementById('labelBorderSizeButton').innerHTML = target.innerHTML;
     var borderStyle = document.getElementById('contentTextId').style.border;
