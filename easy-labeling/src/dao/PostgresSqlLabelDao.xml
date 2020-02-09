@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--태그 규칙을 정의한 DTD 선언-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.LabelDao">
+    <resultMap id="labelResultMap" type="label">
+        <id column="id" property="id"/>
+        <result column="style_name" property="styleName"/>
+    </resultMap>
+
+    <select id="selectList" resultMap="labelResultMap">
+        select id, style_name
+        from label
+    </select>
+
+</mapper>
