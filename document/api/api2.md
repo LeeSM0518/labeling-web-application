@@ -1,4 +1,4 @@
-# 1차 API 설계
+# 2차 API 설계
 
 ## 종이 크기 및 라벨 스타일 선택 페이지 (/init)
 
@@ -52,6 +52,26 @@
 
       ```java
       Paper selectOne(Paper paper);
+      ```
+
+  * LabelDao
+
+    * LABEL의 모든 요소들을 가져온다.
+
+      **SQL**
+
+      ```sql
+      select *
+      from LABEL
+      ```
+
+      * parameterType = None
+      * resultMap = LabelResultMap
+
+      **JAVA**
+
+      ```java
+      List<Label> selectList();
       ```
 
   * StyleDao

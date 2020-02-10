@@ -18,61 +18,22 @@
     <script src="js/responsive.js"></script>
     
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <style>
-        .hc {
-            width: 400px;
-            left: 0;
-            right: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .vc {
-            height: 400px;
-            top: 0;
-            bottom: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        .label-font-size {
-            margin-top: 100px;
-        }
-        
-        .label-example {
-            background-color: #fff;
-            border: 5px solid #000;
-        }
-
-        .header-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            
-        }
-
-        .content-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            font-weight: normal; 
-            font-style: normal;
-            font-size: 16px;
-            line-height: normal;
-            font-family: normal;
-        }
-
-        .tail-text {
-            text-align: center;
-            height: 33%;
-            padding-top: 13%;
-            font-weight: normal; 
-            font-style: normal;
-            font-size: 16px;
-            line-height: normal;
-            font-family: normal;
-        }
-    </style>
+    <script>
+         window.onload = function () {
+            var nextbutton = document.getElementById('nextButton');
+            nextbutton.onclick = function () {
+                if (document.getElementById('titleInputId').value === '') {
+                    alert('제목을 반드시 입력해주세요.');
+                } else if (document.getElementById('categoryButtonId').innerHTML === 'Category') {
+                    alert('카테고리를 반드시 선택해주세요.');
+                } else {
+                    document.getElementById('titleId').value =  document.getElementById('titleInputId').value;
+                    document.getElementById('categoryId').value =   document.getElementById('categoryButtonId').innerHTML;
+                    document.getElementById('context').submit();
+                }
+            }
+        };
+    </script>
 </head>
 
 <body id="page-top">
@@ -87,7 +48,7 @@
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
           <h1 class="h3 mb-0 text-gray-800">간편한 라벨링 웹 사이트</h1>
-        </nav>
+            </nav>
 
             <!-- Topbar -->
             <!-- End of Topbar -->
@@ -104,15 +65,15 @@
                                         <div class="col mr-2">
                                             <div class="dropdown">
                                                 <button class="btn btn-warning dropdown-toggle" style="font-size: 20px" type="button"
-                                                        id="dropdownMenuButton1" data-toggle="dropdown"
+                                                        id="paperSizeButton" data-toggle="dropdown"
                                                         aria-haspopup="true" aria-expanded="false">
                                                     종이 사이즈 선택
                                                 </button>
                                                 <div class="dropdown-menu animated--fade-in" style="font-size: 30px"
                                                      aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item" href="#">없음</a>
-                                                    <a class="dropdown-item" href="#">빨강</a>
-                                                    <a class="dropdown-item" href="#">파랑</a>
+                                                    <a class="dropdown-item"  title="1 3"onclick="setPaperSize(this)">A3</a>
+                                                    <a class="dropdown-item" onclick="setPaperSize(this)">A4</a>
+                                                    <a class="dropdown-item" onclick="setPaperSize(this)">A5</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +138,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm offset-10 mb-5"
+                <form id="context" method="post" action="decorate.do">
+                    <input id="widthId" name="width" type="text">
+                    <input id="heightId" name="height" type="text">
+                    <input id="styleId" name="styleName" type="text">
+                </form>
+                <a id="nextButton" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm offset-10 mb-5"
                    style="font-size: 40px; padding-left: 30px; padding-right: 30px;">Next</a>
                     
                 <!-- Content Row -->
@@ -201,29 +167,6 @@
 <!-- End of Page Wrapper -->
 
 <!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>

@@ -10,8 +10,8 @@
         <result column="code" property="code"/>
     </resultMap>
 
-    <select id="selectList" resultMap="codeResultMap">
-        select name. code
+    <select id="selectList" resultMap="colorResultMap">
+        select name, code
         from color
     </select>
 

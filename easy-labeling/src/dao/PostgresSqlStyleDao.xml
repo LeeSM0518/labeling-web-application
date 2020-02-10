@@ -15,7 +15,7 @@
     </resultMap>
 
     <select id="selectStylesFromLabel" parameterType="label" resultMap="styleResultMap">
-        select
+        select s.id, s.kind
         from label l, style s, label_style ls
         where l.id = ls.label_id and
         s.id = ls.style_id and

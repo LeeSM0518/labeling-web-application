@@ -54,7 +54,7 @@ public class DispatcherServlet extends HttpServlet {
     } catch (Exception e) {
       e.printStackTrace();
       req.setAttribute("error", e);
-      RequestDispatcher rd = req.getRequestDispatcher("/startbootstrap-sb-admin-2-gh-pages/error.jsp");
+      RequestDispatcher rd = req.getRequestDispatcher("/sample-web-page/404.jsp");
       rd.forward(req, resp);
     }
   }

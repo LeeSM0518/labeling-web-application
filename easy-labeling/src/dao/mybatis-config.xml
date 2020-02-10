@@ -35,6 +35,7 @@
         <mapper resource="dao/PostgresSqlWeightDao.xml"/>
         <mapper resource="dao/PostgresSqlFontSizeDao.xml"/>
         <mapper resource="dao/PostgresSqlFontDao.xml"/>
+        <mapper resource="dao/PostgresSqlLabelDao.xml"/>
     </mappers>
 
 </configuration>
