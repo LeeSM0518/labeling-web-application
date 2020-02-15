@@ -109,7 +109,7 @@
                                           <i class="fas fa-arrow-right"></i>
                                         </span>
                                             <p style="margin: 20px">
-                                                <img src="../images/${label.styleName}.png"
+                                                <img src="${pageContext.request.contextPath}/images/${label.styleName}.png"
                                                      style="width: 40rem">
                                             </p>
                                         </a>

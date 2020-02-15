@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: axis.jar jstl.jar saaj.jar jaxrpc.jar asm-7.0.jar standard.j
+ ar ant-1.10.3.jar guice-4.2.2.jar log4j-1.2.8.jar ognl-3.2.10.jar xalan
+ -2.7.2.jar cglib-3.2.10.jar log4j-1.2.17.jar wsdl4j-1.5.1.jar mybatis-3
+ .5.3.jar guava-28.1-jre.jar log4j-api-2.11.2.jar serializer-2.7.2.jar s
+ lf4j-api-1.7.26.jar log4j-core-2.11.2.jar postgresql-42.2.6.jar reflect
+ ions-0.9.11.jar ant-launcher-1.10.3.jar commons-dbcp2-2.7.0.jar commons
+ -logging-1.2.jar commons-pool2-2.7.0.jar javassist-3.24.1-GA.jar javass
+ ist-3.26.0-GA.jar slf4j-log4j12-1.7.26.jar commons-discovery-0.2.jar co
+ mmons-logging-1.0.4.jar javax.servlet-api-4.0.1.jar saaj.jar jaxrpc.jar
+  commons-discovery-0.2.jar commons-logging-1.0.4.jar wsdl4j-1.5.1.jar l
+ og4j-1.2.8.jar axis.jar
+

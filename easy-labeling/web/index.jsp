@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title> </title>
   </head>
   <body>
-  $END$
+    <%
+      response.sendRedirect("/init.do");
+    %>
   </body>
 </html>

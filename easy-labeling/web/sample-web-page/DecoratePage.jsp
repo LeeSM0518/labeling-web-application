@@ -223,12 +223,13 @@
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary" style="font-size: 30px">라벨링 예시</h6>
                                 </div>
-
-                                <!--                                        text-1 -->
                                 <c:set var="styleName" value="${sessionScope.label.styleName}"/>
                                 <div class="card-body">
                                     <div id="labelExample"
-                                         style="width: ${sessionScope.width}; height: ${sessionScope.height}; left: 0; right: 0; margin-left: auto; margin-right: auto; top: 0; bottom: 0; margin-top: auto; margin-bottom: auto; background-color: #fff; border: 1px solid #000;">
+                                         style="width: ${sessionScope.width}; height: ${sessionScope.height};
+                                                 left: 0; right: 0; margin-left: auto; margin-right: auto;
+                                                 top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;
+                                                 background-color: #fff; border: 1px solid #000;">
                                         <c:if test="${styleName == 'text1'}">
                                             <div id="contentTextId" style="font-weight: normal;
                                                 font-style: normal; font-size: 300%; line-height: normal; text-align: center;
@@ -384,7 +385,7 @@
                                                    onclick="setHeaderTextFontFamily(this)">기본</a>
                                                 <c:forEach var="font" items="${fonts}">
                                                     <a class="dropdown-item label-font-size" title="${font.name}"
-                                                       style="font-family:  Nanum Gothic;"
+                                                       style="font-family: ${font.name};"
                                                        onclick="setHeaderTextFontFamily(this)">${font.name}</a>
                                                 </c:forEach>
                                             </div>
@@ -418,7 +419,7 @@
                                                    onclick="setContentTextFontFamily(this)">기본</a>
                                                 <c:forEach var="font" items="${fonts}">
                                                     <a class="dropdown-item label-font-size" title="${font.name}"
-                                                       style="font-family:  Nanum Gothic;"
+                                                       style="font-family: ${font.name};"
                                                        onclick="setContentTextFontFamily(this)">${font.name}</a>
                                                 </c:forEach>
                                             </div>
@@ -450,7 +451,7 @@
                                                    onclick="setTailTextFontFamily(this)">기본</a>
                                                 <c:forEach var="font" items="${fonts}">
                                                     <a class="dropdown-item label-font-size" title="${font.name}"
-                                                       style="font-family:  Nanum Gothic;"
+                                                       style="font-family: ${font.name};"
                                                        onclick="setTailTextFontFamily(this)">${font.name}</a>
                                                 </c:forEach>
                                             </div>
@@ -661,7 +662,7 @@
         </div>
         <div class="row">
             <div class="col-xl-1 col-md-3 mb-3 offset-8">
-                <a href="/init.do" class="btn btn-secondary btn-icon-split">
+                <a href="${pageContext.request.contextPath}/init.do" class="btn btn-secondary btn-icon-split">
                             <span class="icon text-white-50">
                               <i class="fas fa-arrow-right"></i>
                             </span>
@@ -669,7 +670,7 @@
                 </a>
             </div>
             <div class="col-xl-1 col-md-3 mb-3">
-                <a href="/decorate.do" class="btn btn-danger btn-icon-split">
+                <a href="${pageContext.request.contextPath}/decorate.do" class="btn btn-danger btn-icon-split">
                             <span class="icon text-white-50">
                               <i class="fas fa-arrow-right"></i>
                             </span>
