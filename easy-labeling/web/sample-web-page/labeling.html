@@ -4,29 +4,16 @@
         <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Gothic+A1|Jua|Nanum+Brush+Script|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Nanum+Pen+Script|Noto+Sans+KR|Noto+Serif+KR|Sunflower:300&display=swap"
           rel="stylesheet">
         <script>
-            var button = document.getElementById("background").child;
-            console.log(button);
+            function goHome() {
+                location.href = '#';
+            }
         </script>
     </head>
     <body>
-          <div class="card-body">
-                                    <div id="labelExample" style="width: 292mm; height: 205mm;
-                                                 left: 0; right: 0; 
-                                                 background-color: #fff;">
-                                        
-                                        
-                                        
-                                        
-                                                
-                                                    <div id="contentTextId" style="font-size: 300%; line-height: normal; text-align: center;
-                                        font-family: normal; color: initial; height: 100%; border: 2mm solid #000;
-                                        display: flex; justify-content: center; align-items: center;">
-                                                        중간글을 입력해주세요.
-                                                    </div>
-                                                
-                                                
-                                        
-                                    </div>
-                                </div>
+<div id="background" style="width: 292mm; height: 205mm; background-color: #ff0000;" onclick="goHome()">
+  <div id="content" style="font-size: 8cm; font-family: Do Hyeon; color: rgb(255, 228, 0); height: 100%; display: flex; justify-content: center; align-items: center;">
+    S A L E
+  </div>
+</div>
     </body>
 </html>
