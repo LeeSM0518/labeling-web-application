@@ -1,3 +1,40 @@
+// TODO goPrint 정상적으로 실행될 수 있도록
+function goPrint() {
+    document.getElementById('labelBackgroundColorId').value =
+        document.getElementById('labelExample').style.backgroundColor;
+    document.getElementById('borderStyleId').value =
+        document.getElementById('contentTextId').style.border;
+    document.getElementById('barSizeId').value =
+        document.getElementById('label-bar').style.height;
+    document.getElementById('barColorId').value =
+        document.getElementById('label-bar').style.backgroundColor;
+    document.getElementById('headerInputId').value =
+        document.getElementById('headerTextId').innerHTML;
+    document.getElementById('contentInputId').value =
+        document.getElementById('contentTextId').innerHTML;
+    document.getElementById('tailInputId').value =
+        document.getElementById('tailTextId').innerHTML;
+    document.getElementById('headerFontNameId').value =
+        document.getElementById('headerTextId').style.fontFamily;
+    document.getElementById('contentFontNameId').value =
+        document.getElementById('contentTextId').style.fontFamily;
+    document.getElementById('tailFontNameId').value =
+        document.getElementById('tailTextId').style.fontFamily;
+    document.getElementById('headerFontSizeId').value =
+        document.getElementById('headerTextId').style.fontSize;
+    document.getElementById('contentFontSizeId').value =
+        document.getElementById('headerTextId').style.fontSize;
+    document.getElementById('tailFontSizeId').value =
+        document.getElementById('headerTextId').style.fontSize;
+    document.getElementById('headerFontColorId').value =
+        document.getElementById('headerTextId').style.color;
+    document.getElementById('contentFontColorId').value =
+        document.getElementById('contentTextId').style.color;
+    document.getElementById('tailFontColorId').value =
+        document.getElementById('tailTextId').style.color;
+    document.getElementById('context').submit();
+}
+
 function setLabelBackground(target) {
     document.getElementById('labelBackgroundButton').innerHTML = target.innerHTML;
     document.getElementById('labelExample').style.backgroundColor
