@@ -48,6 +48,59 @@
             font-size: 20px
         }
     </style>
+    <script>
+        function goPrint() {
+            document.getElementById('labelBackgroundColorId').value =
+                document.getElementById('labelExample').style.backgroundColor;
+            console.log(document.getElementById('labelBackgroundColorId').value);
+            document.getElementById('borderStyleId').value =
+                document.getElementById('contentTextId').style.border;
+            console.log(document.getElementById('borderStyleId').value);
+            document.getElementById('barSizeId').value =
+                document.getElementById('label-bar').style.height;
+            console.log(document.getElementById('barSizeId').value);
+            document.getElementById('barColorId').value =
+                document.getElementById('label-bar').style.backgroundColor;
+            console.log(document.getElementById('barColorId').value);
+            document.getElementById('headerInputId').value =
+                document.getElementById('headerTextId').innerHTML;
+            console.log(document.getElementById('headerInputId').value);
+            document.getElementById('contentInputId').value =
+                document.getElementById('contentTextId').innerHTML;
+            console.log(document.getElementById('contentInputId').value);
+            document.getElementById('tailInputId').value =
+                document.getElementById('tailTextId').innerHTML;
+            console.log(document.getElementById('tailInputId').value);
+            document.getElementById('headerFontNameId').value =
+                document.getElementById('headerTextId').style.fontFamily;
+            console.log(document.getElementById('headerFontNameId').value);
+            document.getElementById('contentFontNameId').value =
+                document.getElementById('contentTextId').style.fontFamily;
+            console.log(document.getElementById('contentFontNameId').value);
+            document.getElementById('tailFontNameId').value =
+                document.getElementById('tailTextId').style.fontFamily;
+            console.log(document.getElementById('tailFontNameId').value);
+            document.getElementById('headerFontSizeId').value =
+                document.getElementById('headerTextId').style.fontSize;
+            console.log(document.getElementById('headerFontSizeId').value);
+            document.getElementById('contentFontSizeId').value =
+                document.getElementById('headerTextId').style.fontSize;
+            console.log(document.getElementById('contentFontSizeId').value);
+            document.getElementById('tailFontSizeId').value =
+                document.getElementById('headerTextId').style.fontSize;
+            console.log(document.getElementById('tailFontSizeId').value);
+            document.getElementById('headerFontColorId').value =
+                document.getElementById('headerTextId').style.color;
+            console.log(document.getElementById('headerFontColorId').value);
+            document.getElementById('contentFontColorId').value =
+                document.getElementById('contentTextId').style.color;
+            console.log(document.getElementById('contentFontColorId').value);
+            document.getElementById('tailFontColorId').value =
+                document.getElementById('tailTextId').style.color;
+            console.log(document.getElementById('tailFontColorId').value);
+            // document.getElementById('context').submit();
+        }
+    </script>
 </head>
 
 <body id="page-top">
@@ -233,35 +286,25 @@
                                         <c:if test="${styleName == 'text1'}">
                                             <div id="contentTextId" style="font-weight: normal;
                                                 font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                                font-family: normal; color: initial; height: 100%; display: flex; justify-content: center; align-items: center; ">
-                                                중간글을 입력해주세요.
-                                            </div>
+                                                font-family: normal; color: initial; height: 100%; display: flex; justify-content: center; align-items: center; ">중간글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName == 'text2'}">
                                             <div id="headerTextId" class="header-text" style="font-weight: normal;
                                                 font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                                font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                머리글을 입력해주세요.
-                                            </div>
+                                                font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                             <div id="tailTextId" class="tail-text" style="font-weight: normal;
                                                  font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                                  font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                꼬리글을 입력해주세요.
-                                            </div>
+                                                  font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName == 'text2-bar'}">
                                             <div id="headerTextId" class="header-text" style="font-weight: normal;
                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                        font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                머리글을 입력해주세요.
-                                            </div>
+                                        font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                             <div id="label-bar"
                                                  style="height: 1mm; width: 100%; background-color: black;"></div>
                                             <div id="tailTextId" class="tail-text" style="font-weight: normal;
                                          font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                          font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                꼬리글을 입력해주세요.
-                                            </div>
+                                          font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName.contains('border')}">
                                             <div style="padding: 5mm; height: 100%;">
@@ -269,25 +312,19 @@
                                                     <div id="contentTextId" style="font-weight: normal; margin: inherit;
                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;
                                         font-family: normal; color: initial; height: 100%; border: 2mm solid #000;
-                                        display: flex; justify-content: center; align-items: center;">
-                                                        중간글을 입력해주세요.
-                                                    </div>
+                                        display: flex; justify-content: center; align-items: center;">중간글을 입력해주세요.</div>
                                                 </c:if>
                                                 <c:if test="${styleName.contains('text2')}">
                                                     <div id="contentTextId"
                                                          style="height: 100%; border: 2mm solid #000; width: 100%;">
                                                         <div id="headerTextId" class="header-text" style="font-weight: normal;
                                                     font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                                    font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                            머리글을 입력해주세요.
-                                                        </div>
+                                                    font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                                         <div id="label-bar"
                                                              style="height: 1mm; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center;"></div>
                                                         <div id="tailTextId" class="tail-text" style="font-weight: normal;
                                                      font-style: normal; font-size: 300%; line-height: normal; text-align: center;
-                                                      font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">
-                                                            꼬리글을 입력해주세요.
-                                                        </div>
+                                                      font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                                     </div>
                                                 </c:if>
                                             </div>
