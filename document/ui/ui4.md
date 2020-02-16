@@ -72,11 +72,12 @@
 # text1-border
 
 <div id="background" style="width: 292mm; height: 205mm; background-color: #ff0;">
-  <div style="padding: 5mm; height: 100%;">
-    <div style="font-size: 300%; font-family: normal; color: initial; height: 100%; border: 2mm solid #000; display: flex; justify-content: center; align-items: center;"> S A L E
+  <div style="padding: 5mm;">
+    <div style="font-size: 300%; font-family: normal; color: initial; height: 191mm; border: 2mm solid #000; display: flex; justify-content: center; align-items: center;"> S A L E
     </div>
   </div>
 </div>
+
 
 
 * \<div id="background" style="width: 292mm; height: 205mm; background-color: #ff0;">
@@ -91,6 +92,7 @@
   * borderColor: #~ => String
   * color: #~ => Color.code
   * contentText: SALE => String
+  * height: ~ => String
 * **데이터 정리**
   * **session**
     * width
@@ -102,6 +104,7 @@
     * contentFontName
     * contentFontColor
     * contentText
+    * contentHeight = height - borderWeight * 2 - padding(5mm) * 2
 
 <br>
 
@@ -125,6 +128,7 @@
 * \<div style="font-size: 8cm; font-family: Nanum Gothic; color: rgb(255, 0, 0); height: 50%; display: flex; justify-content: center; align-items: center;"> S A L E
   * font-size: 8cm => FontSize.size
   * font-family: Do Hyoen => Font.name
+  * height: ~ => String
   * color: #~ => Color.code
   * value: ~ => String
 * \<div style="height: 4mm; width: 100%; background-color: rgb(255, 94, 0);"></div>
@@ -133,9 +137,10 @@
 * \<div style="font-size: 6cm; font-family: Nanum Gothic; color: rgb(255, 0, 0); height: 50%; display: flex; justify-content: center; align-items: center;"> 세일
   * font-size: 6cm => FontSize.size
   * font-family: Nanum Gothic => Font.name
+  * height: ~ => String
   * color: #~ => Color.code
-  * value: ~ => String
-
+* value: ~ => String
+  
 * **데이터 정리**
   * **session**
     * width
@@ -144,11 +149,13 @@
     * headerFontSize
     * headerFontName
     * headerFontColor
+    * headerHeight = (height - barSize) / 2
     * barSize
     * barColor
     * tailFontSize
     * tailFontName
     * tailFontColor
+    * tailHeight = (height - barSize) / 2
 
 <br>
 
@@ -183,6 +190,7 @@
 	* font-family: ~ => Font.name
 	* color: ~ => Color.code
   * value: ~ => String
+  * height: ~ => String
 * \<div id="label-bar" style="height: 1mm; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center;">
 	* height: 1mm => Weight.size
 	* background-color: black => Color.code
@@ -191,6 +199,7 @@
 	* font-family: ~ => Font.name
 	* color: ~ => Color.code
   * value: ~ => String
+  * height: ~ => String
 * **데이터 정리**
   * **session**
     * width
@@ -201,8 +210,29 @@
     * headerFontSize
     * headerFontName
     * headerFontColor
+    * headerHeight = (height - (padding * 2) - (border * 2) - bar) / 2
     * barSize
     * barColor
     * tailFontSize
     * tailFontName
     * tailFontColor
+    * tailHeight = (height - (padding * 2) - (border * 2) - bar) / 2
+
+<br>
+
+- [x] labelBackgroundColorId
+- [x] borderStyleId
+- [x] barsize
+- [x] barcolor
+- [x] headerfontsize
+- [x] headerfontname
+- [x] headerfontcolor
+- [x] headerinput
+- [x] contentfontsize
+- [x] contentfontname
+- [x] contentfontcolor
+- [x] contentinput
+- [x] tailfontsize
+- [x] tailfontname
+- [x] tailfontcolor
+- [x] tailinput
