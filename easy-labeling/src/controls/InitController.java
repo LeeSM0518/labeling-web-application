@@ -40,6 +40,7 @@ public class InitController implements DataBinding, Controller {
       String stringWidth = intWidth + "mm";
       int intHeight = Integer.parseInt(height.substring(0, 3)) - 5;
       String stringHeight = intHeight + "mm";
+      session.setAttribute("paper", paper);
       session.setAttribute("width", stringWidth);
       session.setAttribute("height", stringHeight);
       session.setAttribute("label", label);
