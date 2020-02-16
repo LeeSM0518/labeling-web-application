@@ -6,6 +6,7 @@ import dao.*;
 import vo.Label;
 import vo.Paper;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Component("/decorate.do")
@@ -42,11 +43,12 @@ public class DecorateController implements DataBinding, Controller {
 
   @Override
   public String execute(Map<String, Object> model) throws Exception {
+    HttpSession session = (HttpSession) model.get("session");
     model.put("colors", colorDao.selectList());
     model.put("weights", weightDao.selectList());
     model.put("fontSizes", fontSizeDao.selectList());
     model.put("fonts", fontDao.selectList());
-    model.put("label", model.get("label"));
+    model.put("label", session.getAttribute("label"));
     // TODO 적용
     return "/sample-web-page/DecoratePage.jsp";
   }
