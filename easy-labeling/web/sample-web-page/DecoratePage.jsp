@@ -658,8 +658,25 @@
                     </div>
                 </c:if>
             </div>
-
         </div>
+        <form id="context" method="post" action="print.do">
+            <input id="labelBackgroundColorId" name="labelBackgroundColor" type="hidden">
+            <input id="borderStyleId" name="borderStyle" type="hidden">
+            <input id="barSizeId" name="barSize" type="hidden">
+            <input id="barColorId" name="barColor" type="hidden">
+            <input id="headerFontSizeId" name="headerFontSize" type="hidden">
+            <input id="headerFontNameId" name="headerFontName" type="hidden">
+            <input id="headerFontColorId" name="headerFontColor" type="hidden">
+            <input id="headerInputId" name="headerFontText" type="hidden">
+            <input id="contentFontSizeId" name="contentFontSize" type="hidden">
+            <input id="contentFontNameId" name="contentFontName" type="hidden">
+            <input id="contentFontColorId" name="contentFontColor" type="hidden">
+            <input id="contentInputId" name="contentFontText" type="hidden">
+            <input id="tailFontSizeId" name="tailFontSize" type="hidden">
+            <input id="tailFontNameId" name="tailFontName" type="hidden">
+            <input id="tailFontColorId" name="tailFontColor" type="hidden">
+            <input id="tailInputId" name="tailFontText" type="hidden">
+        </form>
         <div class="row">
             <div class="col-xl-1 col-md-3 mb-3 offset-8">
                 <a href="${pageContext.request.contextPath}/init.do" class="btn btn-secondary btn-icon-split">
@@ -678,7 +695,7 @@
                 </a>
             </div>
             <div class="col-xl-1 col-md-3 mb-3">
-                <a href="#" class="btn btn-primary btn-icon-split">
+                <a id="printButtonId" class="btn btn-primary btn-icon-split" onclick="goPrint()">
                             <span class="icon text-white-50">
                               <i class="fas fa-arrow-right"></i>
                             </span>
