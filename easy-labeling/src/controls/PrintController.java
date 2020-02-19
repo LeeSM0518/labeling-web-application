@@ -2,6 +2,7 @@ package controls;
 
 import annotation.Component;
 import bind.DataBinding;
+import dao.PostgresSqlPrintDao;
 
 import javax.servlet.http.HttpSession;
 import java.util.Arrays;
@@ -9,6 +10,12 @@ import java.util.Map;
 
 @Component("/print.do")
 public class PrintController implements DataBinding, Controller {
+
+  PostgresSqlPrintDao postgresSqlPrintDao;
+
+  public void setPostgresSqlPrintDao(PostgresSqlPrintDao postgresSqlPrintDao) {
+    this.postgresSqlPrintDao = postgresSqlPrintDao;
+  }
 
   @Override
   public Object[] getDataBinders() {
@@ -37,6 +44,7 @@ public class PrintController implements DataBinding, Controller {
     HttpSession session = (HttpSession) model.get("session");
     String labelBackgroundColor = (String) model.get("labelBackgroundColor");
     if (labelBackgroundColor != null) {
+      postgresSqlPrintDao.insert();
       String borderStyle = (String) model.get("borderStyle");
       session.setAttribute("borderStyle", borderStyle);
       String barSize = (String) model.get("barSize");

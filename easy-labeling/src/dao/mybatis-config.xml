@@ -17,6 +17,7 @@
         <typeAlias type="vo.Paper" alias="paper"/>
         <typeAlias type="vo.Style" alias="style"/>
         <typeAlias type="vo.Weight" alias="weight"/>
+        <typeAlias type="vo.Print" alias="print"/>
     </typeAliases>
 
     <environments default="development">
@@ -36,6 +37,7 @@
         <mapper resource="dao/PostgresSqlFontSizeDao.xml"/>
         <mapper resource="dao/PostgresSqlFontDao.xml"/>
         <mapper resource="dao/PostgresSqlLabelDao.xml"/>
+        <mapper resource="dao/PostgresSqlPrintDao.xml"/>
     </mappers>
 
 </configuration>

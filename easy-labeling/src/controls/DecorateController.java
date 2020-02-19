@@ -49,7 +49,6 @@ public class DecorateController implements DataBinding, Controller {
     model.put("fontSizes", fontSizeDao.selectList());
     model.put("fonts", fontDao.selectList());
     model.put("label", session.getAttribute("label"));
-    // TODO 적용
     return "/sample-web-page/DecoratePage.jsp";
   }
 
