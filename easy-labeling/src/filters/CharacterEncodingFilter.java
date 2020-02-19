@@ -1,6 +1,7 @@
 package filters;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
 public class CharacterEncodingFilter implements Filter {

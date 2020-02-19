@@ -42,6 +42,7 @@ public class InitController implements DataBinding, Controller {
       String stringHeight = intHeight + "mm";
       session.setAttribute("paper", paper);
       session.setAttribute("width", stringWidth);
+      session.setAttribute("intHeight", intHeight);
       session.setAttribute("height", stringHeight);
       session.setAttribute("label", label);
       return "redirect:/decorate.do";

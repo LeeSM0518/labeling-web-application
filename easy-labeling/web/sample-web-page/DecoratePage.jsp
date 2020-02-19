@@ -7,12 +7,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% request.setCharacterEncoding("UTF-8");%>
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
 
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -52,53 +53,47 @@
         function goPrint() {
             document.getElementById('labelBackgroundColorId').value =
                 document.getElementById('labelExample').style.backgroundColor;
-            console.log(document.getElementById('labelBackgroundColorId').value);
-            document.getElementById('borderStyleId').value =
-                document.getElementById('contentTextId').style.border;
-            console.log(document.getElementById('borderStyleId').value);
-            document.getElementById('barSizeId').value =
-                document.getElementById('label-bar').style.height;
-            console.log(document.getElementById('barSizeId').value);
-            document.getElementById('barColorId').value =
-                document.getElementById('label-bar').style.backgroundColor;
-            console.log(document.getElementById('barColorId').value);
-            document.getElementById('headerInputId').value =
-                document.getElementById('headerTextId').innerHTML;
-            console.log(document.getElementById('headerInputId').value);
-            document.getElementById('contentInputId').value =
-                document.getElementById('contentTextId').innerHTML;
-            console.log(document.getElementById('contentInputId').value);
-            document.getElementById('tailInputId').value =
-                document.getElementById('tailTextId').innerHTML;
-            console.log(document.getElementById('tailInputId').value);
-            document.getElementById('headerFontNameId').value =
-                document.getElementById('headerTextId').style.fontFamily;
-            console.log(document.getElementById('headerFontNameId').value);
-            document.getElementById('contentFontNameId').value =
-                document.getElementById('contentTextId').style.fontFamily;
-            console.log(document.getElementById('contentFontNameId').value);
-            document.getElementById('tailFontNameId').value =
-                document.getElementById('tailTextId').style.fontFamily;
-            console.log(document.getElementById('tailFontNameId').value);
-            document.getElementById('headerFontSizeId').value =
-                document.getElementById('headerTextId').style.fontSize;
-            console.log(document.getElementById('headerFontSizeId').value);
-            document.getElementById('contentFontSizeId').value =
-                document.getElementById('headerTextId').style.fontSize;
-            console.log(document.getElementById('contentFontSizeId').value);
-            document.getElementById('tailFontSizeId').value =
-                document.getElementById('headerTextId').style.fontSize;
-            console.log(document.getElementById('tailFontSizeId').value);
-            document.getElementById('headerFontColorId').value =
-                document.getElementById('headerTextId').style.color;
-            console.log(document.getElementById('headerFontColorId').value);
-            document.getElementById('contentFontColorId').value =
-                document.getElementById('contentTextId').style.color;
-            console.log(document.getElementById('contentFontColorId').value);
-            document.getElementById('tailFontColorId').value =
-                document.getElementById('tailTextId').style.color;
-            console.log(document.getElementById('tailFontColorId').value);
-            // document.getElementById('context').submit();
+            if (document.getElementById('contentTextId') != null) {
+                document.getElementById('borderStyleId').value =
+                    document.getElementById('contentTextId').style.border;
+            }
+            if (document.getElementById('label-bar') != null) {
+                document.getElementById('barSizeId').value =
+                    document.getElementById('label-bar').style.height;
+                document.getElementById('barColorId').value =
+                    document.getElementById('label-bar').style.backgroundColor;
+            }
+            if (document.getElementById('headerTextId') != null) {
+                document.getElementById('headerInputId').value =
+                    document.getElementById('headerTextId').innerHTML;
+                document.getElementById('headerFontNameId').value =
+                    document.getElementById('headerTextId').style.fontFamily;
+                document.getElementById('headerFontSizeId').value =
+                    document.getElementById('headerTextId').style.fontSize;
+                document.getElementById('headerFontColorId').value =
+                    document.getElementById('headerTextId').style.color;
+            }
+            if (document.getElementById('contentTextId') != null) {
+                document.getElementById('contentInputId').value =
+                    document.getElementById('contentTextId').innerHTML;
+                document.getElementById('contentFontNameId').value =
+                    document.getElementById('contentTextId').style.fontFamily;
+                document.getElementById('contentFontSizeId').value =
+                    document.getElementById('contentTextId').style.fontSize;
+                document.getElementById('contentFontColorId').value =
+                    document.getElementById('contentTextId').style.color;
+            }
+            if (document.getElementById('tailTextId') != null) {
+                document.getElementById('tailInputId').value =
+                    document.getElementById('tailTextId').innerHTML;
+                document.getElementById('tailFontNameId').value =
+                    document.getElementById('tailTextId').style.fontFamily;
+                document.getElementById('tailFontSizeId').value =
+                    document.getElementById('tailTextId').style.fontSize;
+                document.getElementById('tailFontColorId').value =
+                    document.getElementById('tailTextId').style.color;
+            }
+            document.getElementById('context').submit();
         }
     </script>
 </head>
@@ -285,32 +280,32 @@
                                                  background-color: #fff; border: 1px solid #000;">
                                         <c:if test="${styleName == 'text1'}">
                                             <div id="contentTextId" style="font-weight: normal;
-                                                font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                                font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                                 font-family: normal; color: initial; height: 100%; display: flex; justify-content: center; align-items: center; ">중간글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName == 'text2'}">
                                             <div id="headerTextId" class="header-text" style="font-weight: normal;
-                                                font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                                font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                                 font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                             <div id="tailTextId" class="tail-text" style="font-weight: normal;
-                                                 font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                                 font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                                   font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName == 'text2-bar'}">
                                             <div id="headerTextId" class="header-text" style="font-weight: normal;
-                                        font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                        font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                         font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                             <div id="label-bar"
                                                  style="height: 1mm; width: 100%; background-color: black;"></div>
                                             <div id="tailTextId" class="tail-text" style="font-weight: normal;
-                                         font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                         font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                           font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                         </c:if>
                                         <c:if test="${styleName.contains('border')}">
                                             <div style="padding: 5mm; height: 100%;">
                                                 <c:if test="${styleName.contains('text1')}">
                                                     <div id="contentTextId" style="font-weight: normal; margin: inherit;
-                                        font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                        font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                         font-family: normal; color: initial; height: 100%; border: 2mm solid #000;
                                         display: flex; justify-content: center; align-items: center;">중간글을 입력해주세요.</div>
                                                 </c:if>
@@ -318,12 +313,12 @@
                                                     <div id="contentTextId"
                                                          style="height: 100%; border: 2mm solid #000; width: 100%;">
                                                         <div id="headerTextId" class="header-text" style="font-weight: normal;
-                                                    font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                                    font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                                     font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">머리글을 입력해주세요.</div>
                                                         <div id="label-bar"
                                                              style="height: 1mm; width: 100%; background-color: black; display: flex; justify-content: center; align-items: center;"></div>
                                                         <div id="tailTextId" class="tail-text" style="font-weight: normal;
-                                                     font-style: normal; font-size: 300%; line-height: normal; text-align: center;
+                                                     font-style: normal; font-size: 1cm; line-height: normal; text-align: center;
                                                       font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;">꼬리글을 입력해주세요.</div>
                                                     </div>
                                                 </c:if>
@@ -696,7 +691,7 @@
                 </c:if>
             </div>
         </div>
-        <form id="context" method="post" action="print.do">
+        <form id="context" method="post" action="print.do" accept-charset="UTF-8">
             <input id="labelBackgroundColorId" name="labelBackgroundColor" type="hidden">
             <input id="borderStyleId" name="borderStyle" type="hidden">
             <input id="barSizeId" name="barSize" type="hidden">

@@ -31,11 +31,9 @@
 # text2
 
 <div id="background" style="width: 292mm; height: 205mm; background-color: #ff0;">
-  <div style="font-size: 300%; font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;"> 머리글
-  </div>
-      <div style="font-size: 300%; font-family: normal; color: initial; height: 50%; display: flex; justify-content: center; align-items: center;"> 꼬리글
-  </div>
+
 </div>
+
 
 
 
@@ -235,4 +233,4 @@
 - [x] tailfontsize
 - [x] tailfontname
 - [x] tailfontcolor
-- [x] tailinput
+- [x] tailinput  
