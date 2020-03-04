@@ -26,13 +26,7 @@
 
 ### 프린터 하기
 
-![스크린샷 2020-03-04 오후 7.49.33](../Desktop/스크린샷 2020-03-04 오후 7.49.33.png)
-
-
-
-<br>
-
-
+![image](https://user-images.githubusercontent.com/43431081/75873922-20df7280-5e54-11ea-862d-3e0932cfa57b.png)
 
 ![image](https://user-images.githubusercontent.com/43431081/75872579-c6451700-5e51-11ea-89e1-a5b8b7714e59.png)
 
