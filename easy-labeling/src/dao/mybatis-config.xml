@@ -4,10 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <settings>
-        <setting name="logImpl" value="LOG4J"/>
-    </settings>
-
     <typeAliases>
         <typeAlias type="vo.Color" alias="color"/>
         <typeAlias type="vo.Font" alias="font"/>
