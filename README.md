@@ -1,7 +1,5 @@
 # Easy Labeling Web
 
-* 도메인: [ezlabel.ml](https://ezlabel.ml/init.do)
-
 * 현재 대전 지하상가에서 사용하고 있는 라벨링 웹 사이트입니다.
 
 * Java, JSP, Servlet, Tomcat, MVC architecture, MyBatis, PostgreSQL 를 사용해서 구현한 외주 프로젝트 입니다.
