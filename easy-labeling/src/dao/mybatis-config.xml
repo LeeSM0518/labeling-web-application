@@ -19,8 +19,11 @@
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
-            <dataSource type="JNDI">
-                <property name="data_source" value="java:comp/env/jdbc/labeling"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver"/>
+                <property name="url" value="jdbc:postgresql://192.168.50.44:5432/ezlabel"/>
+                <property name="username" value="pgsql"/>
+                <property name="password" value="pgsql123!@"/>
             </dataSource>
         </environment>
     </environments>
