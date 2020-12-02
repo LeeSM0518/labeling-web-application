@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--태그 규칙을 정의한 DTD 선언-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.PrintDao">
+    <resultMap id="printResultMap" type="print">
+        <id column="id" property="id"/>
+        <result column="print_date" property="date" javaType="java.sql.Date"/>
+    </resultMap>
+
+    <insert id="insert">
+        insert into PRINT values
+        (DEFAULT, now())
+    </insert>
+
+</mapper>
